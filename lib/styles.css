@@ -1,0 +1,113 @@
+/*
+  That was made by
+  _____    _____    _____    _____    _   _
+  |  _  \  /  _  \  |  _  \  |  _  \  | | | |
+  | |_|  | | |_| |  | |_|  | | |_|  | \ \_/ /
+  |     /  |  _  |  |  _  /  |  _  /   \   /
+  |  _  \  | | | |  | | \ \  | | \ \    | |
+  | |_|  | | | | |  | | | |  | | | |    | |
+  |_____/  |_| |_|  |_| |_|  |_| |_|    |_|
+
+  2019 for Databases project
+*/
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+body{
+    background-color: #686868;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+
+
+}
+.menu{
+    text-align: left;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+.menu li {
+    float: left;
+}
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111111;
+}
+
+.vertical-menu {
+    margin-top: 50px;
+    float:left;
+    width: 200px; 
+    max-height: 930px;
+    overflow-y: auto;
+}
+
+.vertical-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+.vertical-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.vertical-menu li a:hover {
+    background-color: #111111;
+}
+
+.content{
+    width: calc(100% - 200px);
+    background-color: #680904;
+    text-align: center;
+    margin: 0 auto;
+    min-height: 450px;
+
+}
+
+.footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+}
+.shop td {
+    text-align: center;
+    padding: 0.5em;
+    padding-right: 1em;
+}
+.players {
+    text-align: center; 
+}
