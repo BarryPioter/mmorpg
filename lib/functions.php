@@ -293,7 +293,7 @@ function showclass() {
 
     if (isset($_SESSION['id'])) {
 
-        $sql = "SELECT class_id,class_name from classes";
+        $sql = "SELECT class_id,class_name from classes where active=1";
 
         $stmt = $mysqli->prepare($sql);
 
@@ -587,4 +587,52 @@ function checkPermision($perm) {
  */
 function checkSession() {
     return (isset($_SESSION['id']) && isset($_SESSION['login']) && isset($_SESSION['loggedAt']));
+}
+
+function setDuration($d) {
+    $sql = "";
+    switch ($d) {
+        case 1:
+            $sql .= "where day(`report_date`)=day(current_timestamp) and month(`report_date`)=month(current_timestamp) and year(`report_date`)=year(current_timestamp) ";
+            break;
+        case 2:
+            $sql .= "where month(`report_date`)=month(current_timestamp) and year(`report_date`)=year(current_timestamp) ";
+            break;
+        case 3:
+            $sql .= "where year(`report_date`)=year(current_timestamp) ";
+            break;
+    }
+    return $sql;
+}
+
+function setDuration2($d) {
+    $sql = "";
+    switch ($d) {
+        case 1:
+            $sql .= "where day(`start_date`)=day(current_timestamp) and month(`start_date`)=month(current_timestamp) and year(`start_date`)=year(current_timestamp) ";
+            break;
+        case 2:
+            $sql .= "where month(`start_date`)=month(current_timestamp) and year(`start_date`)=year(current_timestamp) ";
+            break;
+        case 3:
+            $sql .= "where year(`start_date`)=year(current_timestamp) ";
+            break;
+    }
+    return $sql;
+}
+
+function setDuration3($d) {
+    $sql = "";
+    switch ($d) {
+        case 1:
+            $sql .= "where day(`creation_date`)=day(current_timestamp) and month(`creation_date`)=month(current_timestamp) and year(`creation_date`)=year(current_timestamp) ";
+            break;
+        case 2:
+            $sql .= "where month(`creation_date`)=month(current_timestamp) and year(`creation_date`)=year(current_timestamp) ";
+            break;
+        case 3:
+            $sql .= "where year(`creation_date`)=year(current_timestamp) ";
+            break;
+    }
+    return $sql;
 }
